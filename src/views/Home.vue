@@ -7,7 +7,7 @@
         v-for="(product, i) in getProducts"
         :key="i"
       >
-        <home-card :product="product" />
+        <home-card :product="product" :index="i" />
       </div>
     </div>
   </div>

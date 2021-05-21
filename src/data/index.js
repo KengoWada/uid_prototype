@@ -4,7 +4,7 @@ const products = [
     cost: "UGX 8,500/=",
     price: 8500,
     unit: "KG",
-    image: "https://source.unsplash.com/Su1GqBGEk3c/600x600",
+    image: "https://source.unsplash.com/Su1GqBGEk3c/",
     dos: 15,
     comments: [
       {
@@ -19,7 +19,7 @@ const products = [
     cost: "UGX 1,500/=",
     price: 1500,
     unit: "BUNCH",
-    image: "https://source.unsplash.com/fczCr7MdE7U/600x600",
+    image: "https://source.unsplash.com/fczCr7MdE7U/",
     dos: 8,
     comments: [
       {
@@ -34,7 +34,7 @@ const products = [
     cost: "UGX 10,000/=",
     price: 10000,
     unit: "KG",
-    image: "https://source.unsplash.com/M3iwnCxuCwE/600x600",
+    image: "https://source.unsplash.com/M3iwnCxuCwE/",
     dos: 20,
     comments: [
       {
@@ -49,7 +49,7 @@ const products = [
     cost: "UGX 6,000/=",
     price: 6000,
     unit: "KG",
-    image: "https://source.unsplash.com/biK3YJHhBfM/600x600",
+    image: "https://source.unsplash.com/biK3YJHhBfM/",
     dos: 12,
     comments: [
       {
@@ -64,7 +64,7 @@ const products = [
     cost: "UGX 13,500/=",
     price: 13500,
     unit: "KG",
-    image: "https://source.unsplash.com/EUEWT74ImEU/600x600",
+    image: "https://source.unsplash.com/EUEWT74ImEU/",
     dos: 32,
     comments: [
       {
@@ -79,7 +79,7 @@ const products = [
     cost: "UGX 4,500/=",
     price: 4500,
     unit: "KG",
-    image: "https://source.unsplash.com/kLSEH5vZESA/600x600",
+    image: "https://source.unsplash.com/kLSEH5vZESA/",
     dos: 17,
     comments: [
       {
@@ -94,7 +94,7 @@ const products = [
     cost: "UGX 2,000/=",
     price: 3000,
     unit: "Piece",
-    image: "https://source.unsplash.com/izi5AnlbRIA/600x600",
+    image: "https://source.unsplash.com/izi5AnlbRIA/",
     dos: 18,
     comments: [
       {
