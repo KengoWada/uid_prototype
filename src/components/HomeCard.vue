@@ -10,20 +10,41 @@
         <br />
         Best Before Date: {{ product.dos | dos }}
       </p>
-      <button class="btn btn-success" @click.prevent="">ADD TO CART</button>
+      <button class="btn btn-success" @click.prevent="addToCart">
+        ADD TO CART
+      </button>
     </div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+
 export default {
   name: "HomeCard",
+  computed: {},
   methods: {
+    ...mapGetters(["getCart"]),
     moreDetails() {
       this.$store.commit("setProduct", null);
       this.$store.commit("setProduct", this.product);
       this.$store.commit("setProductIndex", this.index);
       this.$router.push(`/product/${this.product.name}`);
+    },
+    addToCart() {
+      let cart = this.getCart();
+
+      const index = cart.findIndex(
+        (item) => item.product.name === this.product.name
+      );
+
+      if (index === -1) {
+        cart.push({ product: this.product, quantity: 1 });
+      } else {
+        cart[index].quantity += 1;
+      }
+
+      this.$store.commit("setCart", cart);
     },
   },
   props: {

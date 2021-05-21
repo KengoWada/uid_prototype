@@ -31,6 +31,20 @@ Vue.filter("dos", (val) => {
   return `${dd} ${mm} ${yyyy}`;
 });
 
+Vue.filter("cartTotal", (val) => {
+  let sum = 0;
+  for (let item of val) {
+    const subTotal = item.quantity * item.product.price;
+    sum += subTotal;
+  }
+
+  return sum;
+});
+
+Vue.filter("money", (val) => {
+  return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+});
+
 new Vue({
   router,
   store,

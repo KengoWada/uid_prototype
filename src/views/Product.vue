@@ -67,12 +67,22 @@ export default {
   name: "SingleProduct",
   components: { Comment },
   computed: {
-    ...mapGetters(["getProduct", "getProducts", "getProductIndex"]),
+    ...mapGetters(["getProduct", "getProducts", "getProductIndex", "getCart"]),
   },
   methods: {
     addToCart() {
-      console.log("Added to cart");
-      // Add to cart code
+      const cart = this.getCart;
+      const index = cart.findIndex(
+        (item) => item.product.name === this.getProduct.name
+      );
+
+      if (index >= 0) {
+        cart[index].quantity = this.quantity;
+      } else {
+        cart.push({ product: this.getProduct, quantity: this.quantity });
+      }
+
+      this.$store.commit("setCart", cart);
     },
     addComment() {
       const newComment = { name: "Some User", comment: this.comment };
@@ -90,6 +100,17 @@ export default {
       quantity: 0,
       comment: "",
     };
+  },
+  created() {
+    const index = this.getCart.findIndex(
+      (item) => item.product.name === this.getProduct.name
+    );
+
+    if (index >= 0) {
+      this.quantity = this.getCart[index].quantity;
+    } else {
+      this.quantity = 0;
+    }
   },
 };
 </script>

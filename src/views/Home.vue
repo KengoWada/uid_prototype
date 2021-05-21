@@ -21,7 +21,7 @@ export default {
   name: "Home",
   components: { HomeCard },
   computed: {
-    ...mapGetters(["getProducts"]),
+    ...mapGetters(["getProducts", "getCart"]),
   },
 };
 </script>
